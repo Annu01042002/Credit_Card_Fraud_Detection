@@ -10,7 +10,8 @@ import base64
 import io
 import os
 
-st.title("Credit Card Fraud Detection")
+st.title("Credit Card Fraud Detection System")
+st.caption("Upload Your Data to Detect Fraudlent Transaction") 
 loaded_model= pickle.load(open("model.pkl", "rb"))
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 # dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
