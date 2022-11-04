@@ -6,6 +6,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import pickle
 import streamlit as st
+import base64
+import io
+import os
 
 st.title("Credit Card Fraud Detection")
 loaded_model= pickle.load(open("model.pkl", "rb"))
