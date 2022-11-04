@@ -9,8 +9,8 @@ import streamlit as st
 
 loaded_model= pickle.load(open("model.pkl", "rb"))
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
-dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
-st.write(dataframe)
+# dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
+# st.write(dataframe)
 submit = st.button("PREDICTION")
 if submit:
     st.sucess("ok")
