@@ -1,4 +1,4 @@
- import pickle
+import pickle
 loaded_model= pickle.load("model.pkl", "rb")
 pred = st.file_uploader("upload csv files")
 loaded_model.predict(pred)
