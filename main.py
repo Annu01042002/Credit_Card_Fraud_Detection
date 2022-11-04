@@ -1,5 +1,5 @@
 import pickle
-loaded_model= pickle.load("model.pkl", "rb")
+loaded_model= pickle.load(open("model.pkl", "rb"))
 pred = st.file_uploader("upload csv files")
 loaded_model.predict(pred)
 submit = st.button("PREDICTION")
