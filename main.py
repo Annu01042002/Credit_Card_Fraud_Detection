@@ -11,14 +11,14 @@ import io
 import os
 
 st.title("Credit Card Fraud Detection System")
-st.header("Upload Your Data to Detect Fraudlent Transaction") 
+st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
 loaded_model= pickle.load(open("model.pkl", "rb"))
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 # dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
 # st.write(dataframe)
-submit = st.button("PREDICTION")
+submit = st.button("Submit")
 if submit:
-    st.sucess("ok")
+    st.sucess("Ok")
 #background image
 def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
