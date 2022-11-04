@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score
 import pickle
 import streamlit as st
 
+st.title("Credit Card Fraud Detection")
 loaded_model= pickle.load(open("model.pkl", "rb"))
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 # dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
