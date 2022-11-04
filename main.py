@@ -33,4 +33,4 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('asset/WhatsApp Image 2022-11-04 at 12.25.43.jpeg')
+add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
