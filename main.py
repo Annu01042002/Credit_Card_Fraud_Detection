@@ -44,11 +44,27 @@ def view_all_users():
 	c.execute('SELECT * FROM userstable')
 	data = c.fetchall()
 	return 
+#background image
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
 
 def main():
-	"""Simple Login App"""
+	
+	add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
 
-	st.title("Simple Login App")
+	st.title(""Credit Card Fraud Detection System"")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -120,19 +136,19 @@ uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=Tru
 submit = st.button("Submit")
 if submit:
     st.sucess("Ok")
-#background image
-def add_bg_from_local(image_file):
-    with open(image_file, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
-        background-size: cover
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
-add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
+# #background image
+# def add_bg_from_local(image_file):
+#     with open(image_file, "rb") as image_file:
+#         encoded_string = base64.b64encode(image_file.read())
+#     st.markdown(
+#     f"""
+#     <style>
+#     .stApp {{
+#         background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+#         background-size: cover
+#     }}
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+#     )
+# add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
