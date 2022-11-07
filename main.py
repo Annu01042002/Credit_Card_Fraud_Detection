@@ -64,7 +64,7 @@ def main():
 	
 	add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
 
-	st.title(""Credit Card Fraud Detection System"")
+# 	st.title(""Credit Card Fraud Detection System"")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
