@@ -99,13 +99,13 @@ def main():
 					user_result = view_all_users()
 					clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
 					st.dataframe(clean_db)
-		st.title("Credit Card Fraud Detection System")
-                st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
-                loaded_model= pickle.load(open("model.pkl", "rb"))
-                uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
-		submit = st.button("Submit")
-                if submit:
-			st.sucess("Ok")
+	st.title("Credit Card Fraud Detection System")
+        st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
+        loaded_model= pickle.load(open("model.pkl", "rb"))
+        uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+	submit = st.button("Submit")
+        if submit:
+		st.sucess("Ok")
                # dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
                # st.write(dataframe)
 			
