@@ -77,7 +77,7 @@ def main():
 	
 	add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
 	
-	write('Hello, *Welcome to Our Website!* :sunglasses:')
+	st.write('Hello, *Welcome to Our Website!* :sunglasses:')
 	st.title("Credit Card Fraud Detection System")
 	
 	menu = ["Home","Login","SignUp"]
