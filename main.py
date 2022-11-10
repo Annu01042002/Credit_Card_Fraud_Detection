@@ -76,10 +76,10 @@ def credit_detection():
 def main():
 	
 	add_bg_from_local('asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg')
-
+	
+	write('Hello, *Welcome to Our Website!* :sunglasses:')
 	st.title("Credit Card Fraud Detection System")
-	st.header("Welcome To our Website")
-
+	
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
 
