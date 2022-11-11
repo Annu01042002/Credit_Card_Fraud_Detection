@@ -91,8 +91,8 @@ def main():
 
 		username = st.sidebar.text_input("User Name")
 		password = st.sidebar.text_input("Password",type='password')
-		login=st.button('Login')
-		if st.sidebar.checkbox("Login"):
+		
+		if st.button("Login"):
 			# if password == '12345':
 			create_usertable()
 			hashed_pswd = make_hashes(password)
@@ -102,22 +102,11 @@ def main():
 
 				st.success("Logged In as {}".format(username))
 
-				task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
-				if task == "Add Post":
-					st.subheader("Add Your Post")
-
-				elif task == "Analytics":
-					st.subheader("Analytics")
-				elif task == "Profiles":
-					st.subheader("User Profiles")
-					user_result = view_all_users()
-					clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
-					st.dataframe(clean_db)
 	
 			else:
 				st.warning("Incorrect Username/Password")
 			
-			if Login:
+			
 				st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
 				loaded_model= pickle.load(open("model.pkl", "rb"))
 				uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
