@@ -89,8 +89,8 @@ def main():
 	elif choice == "Login":
 		st.subheader("Login Section")
 
-		username = st.sidebar.text_input("User Name")
-		password = st.sidebar.text_input("Password",type='password')
+		username = st.text_input("User Name")
+		password = st.text_input("Password",type='password')
 		
 		if st.button("Login"):
 			# if password == '12345':
@@ -101,12 +101,7 @@ def main():
 			if result:
 
 				st.success("Logged In as {}".format(username))
-
-	
-			else:
-				st.warning("Incorrect Username/Password")
-			
-			
+				
 				st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
 				loaded_model= pickle.load(open("model.pkl", "rb"))
 				uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
@@ -115,6 +110,13 @@ def main():
 				submit = st.button("Submit")
 				if submit:
 					st.sucess("Ok")
+
+	
+			else:
+				st.warning("Incorrect Username/Password")
+			
+			
+				
 
 	elif choice == "SignUp":
 		st.subheader("Create New Account")
