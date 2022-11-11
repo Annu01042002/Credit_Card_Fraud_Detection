@@ -60,18 +60,6 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-def credit_detection():
-	st.title("Credit Card Fraud Detection System")
-	st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
-	loaded_model= pickle.load(open("model.pkl", "rb"))
-	uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
-	# dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
-	# st.write(dataframe)
-	submit = st.button("Submit")
-	if submit:
-		st.sucess("Ok")
-
-
 
 def main():
 	
@@ -79,6 +67,7 @@ def main():
 	
 	st.write('Hello, *Welcome to Our Website!* :sunglasses:')
 	st.title("Credit Card Fraud Detection System")
+	st.write("Please Login/SignUp to continue")
 	
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -93,7 +82,6 @@ def main():
 		password = st.text_input("Password",type='password')
 		
 		if st.button("Login"):
-			# if password == '12345':
 			create_usertable()
 			hashed_pswd = make_hashes(password)
 
@@ -114,9 +102,7 @@ def main():
 	
 			else:
 				st.warning("Incorrect Username/Password")
-			
-			
-				
+						
 
 	elif choice == "SignUp":
 		st.subheader("Create New Account")
@@ -133,14 +119,7 @@ def main():
 
 if __name__ == '__main__':
 	main()
-# 	st.caption("Upload Your Data to Detect the Fraudulent Transaction") 
-# 	loaded_model= pickle.load(open("model.pkl", "rb"))
-# 	uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
-# 	# dataframe = pd.read_csv(uploaded_files,  encoding='utf-8')
-# 	# st.write(dataframe)
-# 	submit = st.button("Submit")
-# 	if submit:
-# 		st.sucess("Ok")
+	
 
 # st.title("Credit Card Fraud Detection System")		
 # #background image
