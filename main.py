@@ -98,6 +98,7 @@ def main():
 				submit = st.button("Submit")
 				if submit:
 					st.sucess("Ok")
+					st.write("Fraudlent Transaction Found")
 
 	
 			else:
