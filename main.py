@@ -53,7 +53,7 @@ def add_bg_from_local(image_file):
     f"""
     <style>
     .stApp {{
-        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-image: url(data:image/{"asset/milad-fakurian-E8Ufcyxz514-unsplash.jpg"};base64,{encoded_string.decode()});
         background-size: cover
     }}
     </style>
